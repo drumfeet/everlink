@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Permanent web page for your digital profile.">
+    <meta name="keywords"
+        content="Everlink, everlinkdotfun, everlink.fun, Arweave, AO, Blockchain, Crypto, Web3, Link in Bio, Profile Page, Decentralized, Permanent Hosting">
+    <meta name="author" content="everlink.fun">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="everlink.fun">
+    <meta property="og:description" content="Permanent web page for your digital profile.">
+    <meta property="og:image"
+        content="https://zgrcgiojaydmjiimqt7p6yw6gsljrup7ygrkv7ydcbranj26ax7q.arweave.net/yaIjIckGBsShDIT-_2LeNJaY0f_Boqr_AxBiBqdeBf8">
+    <meta property="og:url" content="https://everlink.fun">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="everlink.fun">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="everlink.fun">
+    <meta name="twitter:description" content="Permanent web page for your digital profile.">
+    <meta name="twitter:image"
+        content="https://zgrcgiojaydmjiimqt7p6yw6gsljrup7ygrkv7ydcbranj26ax7q.arweave.net/yaIjIckGBsShDIT-_2LeNJaY0f_Boqr_AxBiBqdeBf8">
+    <meta name="twitter:site" content="@everlink">
+    <meta name="twitter:creator" content="@everlink">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="https://zgrcgiojaydmjiimqt7p6yw6gsljrup7ygrkv7ydcbranj26ax7q.arweave.net/yaIjIckGBsShDIT-_2LeNJaY0f_Boqr_AxBiBqdeBf8"
+        type="image/jpeg">
+    <link rel="apple-touch-icon"
+        href="https://zgrcgiojaydmjiimqt7p6yw6gsljrup7ygrkv7ydcbranj26ax7q.arweave.net/yaIjIckGBsShDIT-_2LeNJaY0f_Boqr_AxBiBqdeBf8"
+        type="image/jpeg">
+    <link rel="canonical" href="https://everlink.fun" />
+
+    <title>Username | Everlink</title>
+
+    <style>
+        /* ---------- 1. Design Tokens ---------- */
+        :root {
+            /* Typography */
+            --font-display: Georgia, "Times New Roman", serif;
+            --font-body: "Trebuchet MS", Verdana, Arial, sans-serif;
+
+            /* Palette (tweak to taste) */
+            --clr-bg: #0e0d11;
+            /* rich charcoal */
+            --clr-surface: #1a1a1f;
+            /* card surface */
+            --clr-text: #f5f5f5;
+            /* main copy */
+            --clr-muted: #9c9c9c;
+            --clr-accent: #ff4365;
+            /* hot magenta‑red */
+            --clr-accent-alt: #33f0b4;
+            /* neon mint */
+
+            /* Rhythm */
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 1rem;
+            --space-4: 2rem;
+            --radius: 0.75rem;
+            --transition: 180ms cubic-bezier(.42, 0, .58, 1);
+        }
+
+        /* ---------- 2. Global Reset & Base ---------- */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.55;
+            color: var(--clr-text);
+            background: var(--clr-bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        main {
+            min-height: 100vh;
+            display: grid;
+            place-content: center;
+            padding: var(--space-4) var(--space-3);
+        }
+
+        /* ---------- 3. Container ---------- */
+        .container {
+            width: min(100%, 680px);
+            background: var(--clr-surface);
+            border-radius: var(--radius);
+            padding: var(--space-4) var(--space-3);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+
+        /* ---------- 4. Profile Section ---------- */
+        .profile-picture {
+            width: 128px;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--clr-accent);
+            margin-bottom: var(--space-3);
+        }
+
+        .profile-section h1 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 0 var(--space-2);
+        }
+
+        .profile-section p {
+            max-width: 42ch;
+            margin-inline: auto;
+            color: var(--clr-muted);
+        }
+
+        /* ---------- 5. Link Buttons ---------- */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2);
+            margin-block: var(--space-4);
+        }
+
+        .button {
+            display: inline-block;
+            padding: var(--space-3) var(--space-4);
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--clr-text);
+            background: linear-gradient(135deg, var(--clr-accent) 0%, var(--clr-accent-alt) 100%);
+            border-radius: var(--radius);
+            transition: transform var(--transition), filter var(--transition);
+        }
+
+        .button:hover,
+        .button:focus-visible {
+            transform: translateY(-3px);
+            filter: brightness(1.1);
+        }
+
+        /* ---------- 6. Share Icon ---------- */
+        .share-profile {
+            position: fixed;
+            right: var(--space-3);
+            top: var(--space-3);
+            color: var(--clr-text);
+            opacity: 0.75;
+            transition: opacity var(--transition);
+        }
+
+        .share-profile:hover {
+            opacity: 1;
+        }
+
+        .share-icon {
+            width: 28px;
+            height: 28px;
+            display: block;
+        }
+
+        /* ---------- 7. Footer ---------- */
+        .footer-link {
+            display: inline-block;
+            font-size: 0.875rem;
+            color: var(--clr-muted);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        .footer-link:hover {
+            color: var(--clr-accent-alt);
+        }
+
+        /* ---------- 8. Responsive Tweaks ---------- */
+        @media (min-width: 600px) {
+            .profile-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .links {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .button {
+                flex: 1 1 45%;
+                max-width: 210px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important;
+            }
+        }
+
+        /* ---------- 9. Light‑mode option (optional) ---------- */
+        @media (prefers-color-scheme: light) {
+            :root {
+                --clr-bg: #faf9f7;
+                --clr-surface: #ffffff;
+                --clr-text: #1a1a1a;
+                --clr-muted: #5f5f5f;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <a href="https://twitter.com/intent/tweet?text=I%20just%20discovered%20%40everlinkdotfun%20-%20create%20a%20permanent%20web%20page%20for%20your%20digital%20profile.%20All%20your%20content%20in%20one%20customizable%20link.%20%F0%9F%9A%80%F0%9F%9A%80"
+            target="_blank" rel="noopener noreferrer" class="share-profile">
+            <svg class="share-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 8C19.657 8 21 6.657 21 5s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3Z" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M6 15c1.657 0 3-1.343 3-3S7.657 9 6 9 3 10.343 3 12s1.343 3 3 3Z" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M18 22c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3Z" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M8.59 13.51 15.42 17.49" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M15.41 6.51 8.59 10.49" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </a>
+
+        <div class="container">
+            <div class="profile-section">
+                <img src="https://arweave.net/your-profile-picture.jpg" class="profile-picture" alt="Profile Picture"
+                    onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';" />
+                <h1>Username</h1>
+                <p>Your bio or description goes here. Share a bit about yourself or what these links are for.</p>
+            </div>
+
+            <div class="links">
+                <a href="#" class="button" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a href="#" class="button" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="#" class="button" target="_blank" rel="noopener noreferrer">Twitter&nbsp;/&nbsp;X</a>
+                <a href="#" class="button" target="_blank" rel="noopener noreferrer">Podcast</a>
+                <a href="#" class="button" target="_blank" rel="noopener noreferrer">Website</a>
+            </div>
+
+            <div class="footer">
+                <a href="https://everlink.fun" target="_blank" rel="noopener noreferrer" class="footer-link">
+                    Join us on everlink.fun
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
