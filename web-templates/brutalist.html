@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Permanent web page for your digital profile.">
+    <meta name="keywords"
+        content="Everlink, everlinkdotfun, everlink.fun, Arweave, AO, Blockchain, Crypto, Web3, Link in Bio, Profile Page, Decentralized, Permanent Hosting">
+    <meta name="author" content="everlink.fun">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="everlink.fun">
+    <meta property="og:description" content="Permanent web page for your digital profile.">
+    <meta property="og:image"
+        content="https://zgrcgiojaydmjiimqt7p6yw6gsljrup7ygrkv7ydcbranj26ax7q.arweave.net/yaIjIckGBsShDIT-_2LeNJaY0f_Boqr_AxBiBqdeBf8">
+    <meta property="og:url" content="https://everlink.fun">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="everlink.fun">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="everlink.fun">
+    <meta name="twitter:description" content="Permanent web page for your digital profile.">
+    <meta name="twitter:image"
+        content="https://zgrcgiojaydmjiimqt7p6yw6gsljrup7ygrkv7ydcbranj26ax7q.arweave.net/yaIjIckGBsShDIT-_2LeNJaY0f_Boqr_AxBiBqdeBf8">
+    <meta name="twitter:site" content="@everlink">
+    <meta name="twitter:creator" content="@everlink">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="https://zgrcgiojaydmjiimqt7p6yw6gsljrup7ygrkv7ydcbranj26ax7q.arweave.net/yaIjIckGBsShDIT-_2LeNJaY0f_Boqr_AxBiBqdeBf8"
+        type="image/jpeg">
+    <link rel="apple-touch-icon"
+        href="https://zgrcgiojaydmjiimqt7p6yw6gsljrup7ygrkv7ydcbranj26ax7q.arweave.net/yaIjIckGBsShDIT-_2LeNJaY0f_Boqr_AxBiBqdeBf8"
+        type="image/jpeg">
+    <link rel="canonical" href="https://everlink.fun" />
+
+    <title>Username | Everlink</title>
+
+    <style>
+        :root {
+            --bg: #000;
+            --fg: #fff;
+            --accent-1: #ff00ff;
+            --accent-2: #00ffff;
+        }
+
+        /* --- GLOBAL ------------------------------------------------------ */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--fg);
+            font-family: "Courier New", monospace;
+            line-height: 1.5;
+            /* subtle diagonal grid */
+            background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0 10px, transparent 10px 20px);
+        }
+
+        main {
+            min-height: 100vh;
+            padding: 3rem 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* noise overlay */
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence baseFrequency='0.8'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' /%3E%3C/svg%3E") repeat;
+            opacity: 0.05;
+            mix-blend-mode: overlay;
+        }
+
+        /* --- LAYOUT ------------------------------------------------------ */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem;
+            background: var(--bg);
+            border: 8px solid var(--fg);
+            /* neon double frame */
+            box-shadow: 0 0 0 8px var(--accent-1), 0 0 0 16px var(--accent-2);
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .profile-picture-container {
+            margin-bottom: 2rem;
+        }
+
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 8px solid var(--fg);
+            filter: grayscale(100%) contrast(150%);
+        }
+
+        h1 {
+            margin: 1rem 0;
+            font-size: 5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            /* gradient text */
+            background: linear-gradient(45deg, var(--accent-1) 0%, var(--accent-2) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            /* subtle drop shadow for contrast */
+            filter: drop-shadow(4px 4px 0 var(--fg));
+        }
+
+        /* glitch effect */
+        h1::before,
+        h1::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            background: var(--bg);
+            clip-path: inset(0 0 50% 0);
+            mix-blend-mode: difference;
+            animation: glitch 2s infinite ease-in-out alternate-reverse;
+        }
+
+        h1::after {
+            clip-path: inset(50% 0 0 0);
+            animation-duration: 3s;
+        }
+
+        @keyframes glitch {
+            0% {
+                transform: translate(0, 0) skewX(0deg);
+            }
+
+            20% {
+                transform: translate(-5px, -5px) skewX(5deg);
+            }
+
+            40% {
+                transform: translate(5px, 5px) skewX(-5deg);
+            }
+
+            60% {
+                transform: translate(-5px, 5px) skewX(5deg);
+            }
+
+            80% {
+                transform: translate(5px, -5px) skewX(-5deg);
+            }
+
+            100% {
+                transform: translate(0, 0) skewX(0deg);
+            }
+        }
+
+        p {
+            font-size: 1.4rem;
+            max-width: 60ch;
+            margin: 0 auto 3rem;
+        }
+
+        /* --- LINKS ------------------------------------------------------- */
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .button {
+            display: block;
+            padding: 1.2rem;
+            font-size: 1.1rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+            background: var(--accent-1);
+            color: var(--bg);
+            border: 4px solid var(--accent-2);
+            transform: skewY(-3deg);
+            transition: transform 0.15s ease, background 0.3s ease;
+        }
+
+        .button:hover {
+            background: var(--accent-2);
+            border-color: var(--accent-1);
+            color: var(--bg);
+            transform: scale(1.05) rotate(-1deg);
+        }
+
+        /* --- SHARE ICON -------------------------------------------------- */
+        .share-profile {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-1);
+            padding: 12px;
+            border: 4px solid var(--accent-2);
+            transform: rotate(6deg);
+            z-index: 100;
+            transition: transform 0.15s ease;
+        }
+
+        .share-profile:hover {
+            transform: rotate(0deg) scale(1.1);
+        }
+
+        .share-icon {
+            width: 28px;
+            height: 28px;
+            fill: var(--bg);
+        }
+
+        /* --- FOOTER ------------------------------------------------------ */
+        .footer {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-link {
+            display: inline-block;
+            padding: 0.6rem 1.4rem;
+            background: var(--bg);
+            color: var(--fg);
+            text-decoration: none;
+            border: 4px solid var(--fg);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .footer-link:hover {
+            background: var(--fg);
+            color: var(--bg);
+        }
+
+        /* --- MEDIA QUERIES ---------------------------------------------- */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+
+            .profile-picture {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <a href="https://twitter.com/intent/tweet?text=I%20just%20discovered%20%40everlinkdotfun%20-%20create%20a%20permanent%20web%20page%20for%20your%20digital%20profile.%20All%20your%20content%20in%20one%20customizable%20link.%20%F0%9F%9A%80%F0%9F%9A%80"
+            target="_blank" rel="noopener noreferrer" class="share-profile" title="Share this page">
+            <svg class="share-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 8c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z" />
+                <path d="M6 15c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z" />
+                <path d="M18 22c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z" />
+                <path d="M8.59 13.51l6.83 3.98" />
+                <path d="M15.41 6.51l-6.82 3.98" />
+            </svg>
+        </a>
+
+        <div class="container">
+            <div class="profile-section">
+                <div class="profile-picture-container">
+                    <img src="https://placehold.co/200x200" class="profile-picture"
+                        onError="this.onerror=null; this.src='https://placehold.co/200x200';" alt="Profile Picture" />
+                </div>
+                <h1 data-text="Username">Username</h1>
+                <p>Your bio or description goes here. Share a bit about yourself or what these links are for.</p>
+            </div>
+
+            <div class="links">
+                <a href="#" class="button" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a href="#" class="button" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="#" class="button" target="_blank" rel="noopener noreferrer">Twitter/X</a>
+                <a href="#" class="button" target="_blank" rel="noopener noreferrer">Podcast</a>
+                <a href="#" class="button" target="_blank" rel="noopener noreferrer">Website</a>
+            </div>
+
+            <div class="footer">
+                <a href="https://everlink.fun" target="_blank" rel="noopener noreferrer" class="footer-link">Join us on
+                    everlink.fun</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
