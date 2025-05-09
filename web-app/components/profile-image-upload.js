@@ -116,7 +116,11 @@ export function ProfileImageUpload({ imageUrl, onImageChange }) {
                 alt="Profile preview"
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  e.target.src = "/diverse-professional-profiles.png"
+                  setError("Failed to load image.");
+                  setPreviewUrl("");
+                  if (fileInputRef.current) {
+                    fileInputRef.current.value = "";
+                  }
                 }}
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
