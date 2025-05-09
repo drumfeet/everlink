@@ -132,8 +132,8 @@ export function Layout({ children }) {
                     <div className="flex flex-col gap-4 py-4">
                       <Button
                         className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white"
-                        onClick={() => {
-                          connectWanderWallet()
+                        onClick={async () => {
+                          await connectWanderWallet()
                           setIsDialogOpen(false)
                           toast({
                             title: "Wallet Connected",
@@ -149,8 +149,8 @@ export function Layout({ children }) {
                       <Button
                         variant="outline"
                         className="flex items-center justify-center gap-2 border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800"
-                        onClick={() => {
-                          connectBrowserWallet()
+                        onClick={async () => {
+                          await connectBrowserWallet()
                           setIsDialogOpen(false)
                           toast({
                             title: "Wallet Connected",
