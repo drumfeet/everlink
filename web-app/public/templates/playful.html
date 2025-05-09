@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Permanent web page for your digital profile.">
+    <meta name="keywords"
+        content="Everlink, everlinkdotfun, everlink.fun, Arweave, AO, Blockchain, Crypto, Web3, Link in Bio, Profile Page, Decentralized, Permanent Hosting">
+    <meta name="author" content="everlink.fun">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="everlink.fun">
+    <meta property="og:description" content="Permanent web page for your digital profile.">
+    <meta property="og:image"
+        content="https://zgrcgiojaydmjiimqt7p6yw6gsljrup7ygrkv7ydcbranj26ax7q.arweave.net/yaIjIckGBsShDIT-_2LeNJaY0f_Boqr_AxBiBqdeBf8">
+    <meta property="og:url" content="https://everlink.fun">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="everlink.fun">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="everlink.fun">
+    <meta name="twitter:description" content="Permanent web page for your digital profile.">
+    <meta name="twitter:image"
+        content="https://zgrcgiojaydmjiimqt7p6yw6gsljrup7ygrkv7ydcbranj26ax7q.arweave.net/yaIjIckGBsShDIT-_2LeNJaY0f_Boqr_AxBiBqdeBf8">
+    <meta name="twitter:site" content="@everlink">
+    <meta name="twitter:creator" content="@everlink">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="https://zgrcgiojaydmjiimqt7p6yw6gsljrup7ygrkv7ydcbranj26ax7q.arweave.net/yaIjIckGBsShDIT-_2LeNJaY0f_Boqr_AxBiBqdeBf8"
+        type="image/jpeg">
+    <link rel="apple-touch-icon"
+        href="https://zgrcgiojaydmjiimqt7p6yw6gsljrup7ygrkv7ydcbranj26ax7q.arweave.net/yaIjIckGBsShDIT-_2LeNJaY0f_Boqr_AxBiBqdeBf8"
+        type="image/jpeg">
+    <link rel="canonical" href="https://everlink.fun" />
+
+    <title>Username | Everlink</title>
+
+    <style>
+        /* ==========================================================================
+   1. Variables & Base Setup
+   ========================================================================== */
+
+        :root {
+            /* Color Palette - Vibrant & Contrasting */
+            --color-background-start: #ffccff;
+            /* Playful Pink */
+            --color-background-end: #ccffff;
+            /* Light Cyan */
+            --color-container-background: rgba(255, 255, 255, 0.9);
+            /* Semi-transparent white for readability */
+            --color-text-primary: #333333;
+            /* Dark Grey for readability */
+            --color-text-heading: #222222;
+            /* Slightly darker for headings */
+            --color-text-on-bright: #000000;
+            /* Black text for light/bright buttons */
+            --color-text-on-dark: #ffffff;
+            /* White text for dark/bright buttons */
+            --color-accent-primary: #ff69b4;
+            /* Hot Pink */
+            --color-accent-secondary: #00ffff;
+            /* Cyan */
+            --color-accent-tertiary: #ffff00;
+            /* Yellow */
+            --color-accent-quaternary: #ff9900;
+            /* Orange */
+            --color-accent-quinary: #32cd32;
+            /* Lime Green */
+            --color-footer-link: #555555;
+            --color-footer-link-hover: var(--color-accent-primary);
+            --color-shadow: rgba(0, 0, 0, 0.1);
+
+            /* Typography Scale (using rem for scalability) */
+            --font-size-base: 16px;
+            /* Base font size on html */
+            --font-size-small: 0.875rem;
+            /* 14px */
+            --font-size-normal: 1rem;
+            /* 16px (body) */
+            --font-size-medium: 1.125rem;
+            /* 18px (buttons) */
+            --font-size-large: 1.5rem;
+            /* 24px */
+            --font-size-xlarge: 2.25rem;
+            /* 36px (h1) */
+
+            /* Spacing */
+            --spacing-unit: 1rem;
+            /* Base spacing unit */
+
+            /* Animation */
+            --transition-speed-fast: 0.2s;
+            --transition-speed-normal: 0.3s;
+            --transition-timing-function: ease-in-out;
+
+            /* Borders */
+            --border-radius-small: 4px;
+            --border-radius-medium: 8px;
+            --border-radius-large: 50%;
+            /* For profile picture */
+            --border-width-thin: 1px;
+            --border-width-medium: 2px;
+
+            /* Web-Safe Font Stack */
+            --font-family-primary: Arial, Helvetica, sans-serif;
+        }
+
+        /* Apply base font size for rem calculation */
+        html {
+            font-size: var(--font-size-base);
+            scroll-behavior: smooth;
+        }
+
+        /* Basic Reset & Body Styling */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family-primary);
+            color: var(--color-text-primary);
+            background: linear-gradient(135deg, var(--color-background-start), var(--color-background-end));
+            background-attachment: fixed;
+            /* Keep gradient fixed during scroll */
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            /* Helps with centering main content */
+            justify-content: center;
+            align-items: flex-start;
+            /* Align container to top */
+            padding: var(--spacing-unit);
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+            animation: backgroundShift 15s ease infinite alternate;
+            /* Subtle background animation */
+        }
+
+        /* ==========================================================================
+   2. Layout & Container
+   ========================================================================== */
+
+        main {
+            width: 100%;
+            max-width: 680px;
+            /* Content width limit */
+            position: relative;
+            /* For positioning share button */
+            padding-top: calc(var(--spacing-unit) * 3);
+            /* Space for share button */
+        }
+
+        .container {
+            background-color: var(--color-container-background);
+            padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 1);
+            /* Responsive padding */
+            border-radius: var(--border-radius-medium);
+            box-shadow: 0 4px 15px var(--color-shadow);
+            text-align: center;
+            width: 100%;
+            animation: fadeInScale 0.5s var(--transition-timing-function) forwards;
+            opacity: 0;
+            /* Start hidden for animation */
+        }
+
+        /* ==========================================================================
+   3. Components
+   ========================================================================== */
+
+        /* --- Share Button --- */
+        .share-profile {
+            position: absolute;
+            top: var(--spacing-unit);
+            right: var(--spacing-unit);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background-color: var(--color-accent-primary);
+            color: var(--color-text-on-dark);
+            border-radius: var(--border-radius-large);
+            text-decoration: none;
+            transition: transform var(--transition-speed-fast) var(--transition-timing-function),
+                background-color var(--transition-speed-fast) var(--transition-timing-function);
+            z-index: 10;
+            box-shadow: 0 2px 5px var(--color-shadow);
+        }
+
+        .share-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .share-profile:hover,
+        .share-profile:focus {
+            transform: scale(1.1) rotate(10deg);
+            background-color: var(--color-accent-secondary);
+            color: var(--color-text-on-bright);
+            outline: none;
+            /* Use focus state instead */
+        }
+
+        .share-profile:focus-visible {
+            outline: var(--border-width-medium) solid var(--color-accent-quaternary);
+            outline-offset: 2px;
+        }
+
+        .share-profile:active {
+            transform: scale(1.0);
+        }
+
+
+        /* --- Profile Section --- */
+        .profile-section {
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: var(--border-radius-large);
+            border: var(--border-width-medium) solid var(--color-accent-primary);
+            margin-bottom: var(--spacing-unit);
+            display: inline-block;
+            /* Needed for margin auto centering if text-align wasn't center */
+            box-shadow: 0 0 10px var(--color-shadow);
+            transition: transform var(--transition-speed-normal) var(--transition-timing-function);
+            animation: profilePulse 2s infinite ease-in-out;
+        }
+
+        .profile-picture:hover {
+            transform: scale(1.05);
+            /* Slightly enlarge on hover */
+            animation-play-state: paused;
+            /* Pause pulse on hover */
+        }
+
+        /* Fallback for broken image */
+        .profile-picture[src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="] {
+            background-color: #eee;
+            /* Placeholder background */
+            border-color: #ccc;
+        }
+
+        .profile-section h1 {
+            font-size: var(--font-size-xlarge);
+            color: var(--color-text-heading);
+            margin-bottom: calc(var(--spacing-unit) / 2);
+            font-weight: bold;
+        }
+
+        .profile-section p {
+            font-size: var(--font-size-normal);
+            color: var(--color-text-primary);
+            max-width: 90%;
+            /* Prevent bio becoming too wide */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Links Section --- */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-unit);
+            /* Space between buttons */
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .button {
+            display: block;
+            /* Full width */
+            padding: calc(var(--spacing-unit) * 0.8) var(--spacing-unit);
+            font-size: var(--font-size-medium);
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: var(--border-radius-medium);
+            border: var(--border-width-medium) solid transparent;
+            /* Reserve space for potential border */
+            transition: transform var(--transition-speed-fast) var(--transition-timing-function),
+                background-color var(--transition-speed-fast) var(--transition-timing-function),
+                color var(--transition-speed-fast) var(--transition-timing-function),
+                box-shadow var(--transition-speed-fast) var(--transition-timing-function);
+            position: relative;
+            /* For potential pseudo-elements */
+            overflow: hidden;
+            /* For potential effects */
+            animation: buttonAppear 0.5s var(--transition-timing-function) backwards;
+        }
+
+        /* Staggered animation delay for buttons */
+        .button:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .button:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .button:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .button:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .button:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        /* Add more if needed */
+
+
+        /* Button Color Variations - Using :nth-child for variety */
+        .button:nth-child(4n + 1) {
+            background-color: var(--color-accent-primary);
+            color: var(--color-text-on-dark);
+        }
+
+        .button:nth-child(4n + 2) {
+            background-color: var(--color-accent-secondary);
+            color: var(--color-text-on-bright);
+        }
+
+        .button:nth-child(4n + 3) {
+            background-color: var(--color-accent-tertiary);
+            color: var(--color-text-on-bright);
+        }
+
+        .button:nth-child(4n + 4) {
+            background-color: var(--color-accent-quaternary);
+            color: var(--color-text-on-bright);
+        }
+
+        /* Button Hover & Focus States - Playful Interaction */
+        .button:hover,
+        .button:focus {
+            transform: translateY(-3px) scale(1.02);
+            /* Lift and slightly enlarge */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            outline: none;
+            /* Remove default focus outline, use focus-visible */
+        }
+
+        .button:focus-visible {
+            outline: var(--border-width-medium) dashed var(--color-text-primary);
+            outline-offset: 3px;
+        }
+
+        /* Different hover effect for each color */
+        .button:nth-child(4n + 1):hover,
+        .button:nth-child(4n + 1):focus {
+            background-color: #e055a4;
+        }
+
+        /* Darker Pink */
+        .button:nth-child(4n + 2):hover,
+        .button:nth-child(4n + 2):focus {
+            background-color: #00e6e6;
+        }
+
+        /* Slightly Darker Cyan */
+        .button:nth-child(4n + 3):hover,
+        .button:nth-child(4n + 3):focus {
+            background-color: #e6e600;
+        }
+
+        /* Slightly Darker Yellow */
+        .button:nth-child(4n + 4):hover,
+        .button:nth-child(4n + 4):focus {
+            background-color: #e68a00;
+        }
+
+        /* Darker Orange */
+
+
+        .button:active {
+            transform: translateY(1px) scale(0.99);
+            /* Push down effect */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+
+        /* --- Footer --- */
+        .footer {
+            margin-top: calc(var(--spacing-unit) * 2);
+            padding-top: var(--spacing-unit);
+            border-top: var(--border-width-thin) solid #eee;
+        }
+
+        .footer-link {
+            font-size: var(--font-size-small);
+            color: var(--color-footer-link);
+            text-decoration: none;
+            transition: color var(--transition-speed-fast) var(--transition-timing-function);
+        }
+
+        .footer-link:hover,
+        .footer-link:focus {
+            color: var(--color-footer-link-hover);
+            text-decoration: underline;
+            outline: none;
+        }
+
+        .footer-link:focus-visible {
+            outline: var(--border-width-thin) dashed var(--color-footer-link-hover);
+            outline-offset: 2px;
+        }
+
+        /* ==========================================================================
+   4. Animations
+   ========================================================================== */
+
+        @keyframes backgroundShift {
+            from {
+                background-position: 0% 50%;
+            }
+
+            to {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes profilePulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.03);
+            }
+        }
+
+        @keyframes buttonAppear {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ==========================================================================
+   5. Responsiveness
+   ========================================================================== */
+
+        /* Adjust padding and font sizes for smaller screens */
+        @media (max-width: 480px) {
+            :root {
+                --font-size-xlarge: 1.8rem;
+                /* Slightly smaller h1 */
+                --font-size-medium: 1rem;
+                /* Slightly smaller buttons */
+            }
+
+            .container {
+                padding: var(--spacing-unit) calc(var(--spacing-unit) * 0.8);
+            }
+
+            .profile-picture {
+                width: 100px;
+                height: 100px;
+            }
+
+            .share-profile {
+                width: 40px;
+                height: 40px;
+                top: calc(var(--spacing-unit) * 0.5);
+                right: calc(var(--spacing-unit) * 0.5);
+            }
+
+            .share-icon {
+                width: 20px;
+                height: 20px;
+            }
+
+            main {
+                padding-top: calc(var(--spacing-unit) * 3.5);
+                /* Ensure space for share button */
+            }
+        }
+
+        /* Adjustments for larger screens if needed (optional) */
+        @media (min-width: 768px) {
+            .container {
+                padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 2.5);
+            }
+
+            main {
+                padding-top: calc(var(--spacing-unit) * 2);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <a href="https://twitter.com/intent/tweet?text=I%20just%20discovered%20%40everlinkdotfun%20-%20create%20a%20permanent%20web%20page%20for%20your%20digital%20profile.%20All%20your%20content%20in%20one%20customizable%20link.%20%F0%9F%9A%80%F0%9F%9A%80"
+            target="_blank" rel="noopener noreferrer" class="share-profile">
+            <svg class="share-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 8C19.657 8 21 6.657 21 5s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3Z" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M6 15c1.657 0 3-1.343 3-3S7.657 9 6 9 3 10.343 3 12s1.343 3 3 3Z" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M18 22c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3Z" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M8.59 13.51 15.42 17.49" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M15.41 6.51 8.59 10.49" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </a>
+
+        <div class="container">
+            <div class="profile-section">
+                <img src="https://arweave.net/your-profile-picture.jpg" class="profile-picture" alt="Profile Picture"
+                    onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';" />
+                <h1>Username</h1>
+                <p>Your bio or description goes here. Share a bit about yourself or what these links are for.</p>
+            </div>
+
+            <div class="links">
+                <a href="#" class="button" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a href="#" class="button" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="#" class="button" target="_blank" rel="noopener noreferrer">Twitter&nbsp;/&nbsp;X</a>
+                <a href="#" class="button" target="_blank" rel="noopener noreferrer">Podcast</a>
+                <a href="#" class="button" target="_blank" rel="noopener noreferrer">Website</a>
+            </div>
+
+            <div class="footer">
+                <a href="https://everlink.fun" target="_blank" rel="noopener noreferrer" class="footer-link">
+                    Join us on everlink.fun
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
